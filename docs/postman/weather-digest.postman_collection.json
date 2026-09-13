@@ -6,8 +6,16 @@
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "geocodingBaseUrl", "value": "https://geocoding-api.open-meteo.com/v1/search", "type": "string" },
-    { "key": "weatherBaseUrl", "value": "https://api.open-meteo.com/v1/forecast", "type": "string" },
+    {
+      "key": "geocodingBaseUrl",
+      "value": "https://geocoding-api.open-meteo.com/v1/search",
+      "type": "string"
+    },
+    {
+      "key": "weatherBaseUrl",
+      "value": "https://api.open-meteo.com/v1/forecast",
+      "type": "string"
+    },
     { "key": "city", "value": "Москва", "type": "string" },
     { "key": "lat", "value": "55.75204", "type": "string" },
     { "key": "lon", "value": "37.61781", "type": "string" },
@@ -111,7 +119,10 @@
               "query": [
                 { "key": "latitude", "value": "55.75204" },
                 { "key": "longitude", "value": "37.61781" },
-                { "key": "daily", "value": "temperature_2m_max,temperature_2m_min,precipitation_sum" },
+                {
+                  "key": "daily",
+                  "value": "temperature_2m_max,temperature_2m_min,precipitation_sum"
+                },
                 { "key": "forecast_days", "value": "3" },
                 { "key": "timezone", "value": "auto" }
               ]
@@ -136,7 +147,10 @@
               "query": [
                 { "key": "latitude", "value": "999" },
                 { "key": "longitude", "value": "37.61781" },
-                { "key": "daily", "value": "temperature_2m_max,temperature_2m_min,precipitation_sum" },
+                {
+                  "key": "daily",
+                  "value": "temperature_2m_max,temperature_2m_min,precipitation_sum"
+                },
                 { "key": "forecast_days", "value": "3" },
                 { "key": "timezone", "value": "auto" }
               ]

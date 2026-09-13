@@ -32,9 +32,7 @@ async function getCityDigest(city, { days, noCache }) {
 }
 
 export async function getWeatherDigest(cities, options) {
-  const outcomes = await Promise.allSettled(
-    cities.map((city) => getCityDigest(city, options)),
-  );
+  const outcomes = await Promise.allSettled(cities.map((city) => getCityDigest(city, options)));
 
   return outcomes.map((outcome, index) => {
     const city = cities[index];
