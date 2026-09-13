@@ -127,3 +127,14 @@ npm run format        # автоформатирование Prettier
 npm run format:check  # проверка форматирования без изменений файлов
 npm test              # запуск тестов (node:test)
 ```
+
+### Docker
+
+```bash
+docker build -t weather-digest-cli .
+docker run --rm -v "$(pwd)/reports:/app/reports" weather-digest-cli --city "Москва" --days 3
+```
+
+Параметры (таймаут, каталог отчётов и т. д.) передаются через `-e`, например
+`-e REQUEST_TIMEOUT_MS=8000`. Каталог `reports` монтируется томом, иначе отчёты
+останутся только внутри контейнера и будут потеряны при его удалении.
