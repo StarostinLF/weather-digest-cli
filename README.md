@@ -145,3 +145,7 @@ docker run --rm -v "$(pwd)/reports:/app/reports" weather-digest-cli --city "Мо
 Откройте её в браузере, нажмите «Выберите файл» и укажите JSON-отчёт из
 `reports/`. Страница читает файл через FileReader и строит таблицу средствами
 DOM API (`createElement`/`append`), без innerHTML и фреймворков.
+
+---
+
+_Часть кода в этом репозитории написана с помощью ИИ-ассистента (Claude Code)._
