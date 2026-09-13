@@ -1,0 +1,17 @@
+{
+  "name": "weather-digest-cli",
+  "version": "1.0.0",
+  "description": "Консольная утилита «Погодный дайджест»: прогноз погоды по городам через Open-Meteo API",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
