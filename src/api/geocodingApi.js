@@ -1,4 +1,5 @@
 import { config } from '../config.js';
+import { CityNotFoundError } from '../errors.js';
 import { fetchJson } from './httpClient.js';
 
 export async function fetchCityLocation(city) {
@@ -12,7 +13,7 @@ export async function fetchCityLocation(city) {
   const [result] = data.results ?? [];
 
   if (!result) {
-    throw new Error(`Город "${city}" не найден`);
+    throw new CityNotFoundError(`Город "${city}" не найден`);
   }
 
   return {
