@@ -6,8 +6,7 @@ function parseTimeout(value) {
 }
 
 export const config = {
-  geocodingUrl:
-    process.env.GEOCODING_API_URL ?? 'https://geocoding-api.open-meteo.com/v1/search',
+  geocodingUrl: process.env.GEOCODING_API_URL ?? 'https://geocoding-api.open-meteo.com/v1/search',
   weatherUrl: process.env.WEATHER_API_URL ?? 'https://api.open-meteo.com/v1/forecast',
   requestTimeoutMs: parseTimeout(process.env.REQUEST_TIMEOUT_MS),
   reportsDir: process.env.REPORTS_DIR ?? 'reports',

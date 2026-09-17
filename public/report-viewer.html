@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Просмотр отчёта — Weather Digest</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 0 16px;
+        color: #1a1a1a;
+        background: #ffffff;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 12px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 6px 10px;
+        text-align: left;
+      }
+      th {
+        background: #f2f2f2;
+      }
+      .error {
+        color: #b00020;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Просмотр отчёта о погоде</h1>
+    <p>Выберите JSON-файл отчёта из каталога <code>reports/</code>.</p>
+    <input type="file" id="fileInput" accept="application/json" />
+    <div id="output"></div>
+
+    <script src="report-viewer.js"></script>
+  </body>
+</html>

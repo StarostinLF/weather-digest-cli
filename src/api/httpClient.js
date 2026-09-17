@@ -10,9 +10,7 @@ export async function fetchJson(url) {
     response = await fetch(url, { signal: controller.signal });
   } catch (error) {
     if (error.name === 'AbortError') {
-      throw new TimeoutError(
-        `Превышено время ожидания ответа (${config.requestTimeoutMs} мс)`,
-      );
+      throw new TimeoutError(`Превышено время ожидания ответа (${config.requestTimeoutMs} мс)`);
     }
     throw new NetworkError('Не удалось подключиться к API, проверьте сеть');
   } finally {
